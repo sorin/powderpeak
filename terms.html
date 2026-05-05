@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service — PowderPeak</title>
+  <meta name="description" content="Terms of Service for PowderPeak, including SMS messaging terms and rental policies.">
+  <link href="https://api.fontshare.com/v2/css?f[]=instrument-serif@400,700&f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+  <style>
+    :root, [data-theme="light"] {
+      --color-bg: #f7f6f2; --color-surface: #f9f8f5; --color-surface-2: #fbfbf9;
+      --color-surface-offset: #f3f0ec; --color-divider: #dcd9d5; --color-border: #d4d1ca;
+      --color-text: #28251d; --color-text-muted: #7a7974; --color-text-faint: #bab9b4;
+      --color-text-inverse: #f9f8f4; --color-primary: #01696f; --color-primary-hover: #0c4e54;
+      --radius-sm: 0.375rem; --radius-md: 0.5rem; --radius-lg: 0.75rem; --radius-full: 9999px;
+      --transition-interactive: 180ms cubic-bezier(0.16, 1, 0.3, 1);
+      --shadow-sm: 0 1px 2px oklch(0.2 0.01 80 / 0.06);
+      --space-2: 0.5rem; --space-3: 0.75rem; --space-4: 1rem; --space-5: 1.25rem; --space-6: 1.5rem;
+      --space-8: 2rem; --space-10: 2.5rem; --space-12: 3rem; --space-16: 4rem; --space-20: 5rem;
+      --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem); --text-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
+      --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem); --text-lg: clamp(1.125rem, 1rem + 0.75vw, 1.5rem);
+      --text-xl: clamp(1.5rem, 1.2rem + 1.25vw, 2.25rem);
+      --font-display: 'Instrument Serif', Georgia, serif; --font-body: 'Satoshi', 'Inter', sans-serif;
+      --content-default: 960px; --content-narrow: 640px;
+    }
+    [data-theme="dark"] {
+      --color-bg: #171614; --color-surface: #1c1b19; --color-surface-2: #201f1d;
+      --color-surface-offset: #1d1c1a; --color-divider: #262523; --color-border: #393836;
+      --color-text: #cdccca; --color-text-muted: #797876; --color-text-faint: #5a5957;
+      --color-text-inverse: #2b2a28; --color-primary: #4f98a3; --color-primary-hover: #227f8b;
+      --shadow-sm: 0 1px 2px oklch(0 0 0 / 0.2);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme]) {
+        --color-bg: #171614; --color-surface: #1c1b19; --color-surface-2: #201f1d;
+        --color-surface-offset: #1d1c1a; --color-divider: #262523; --color-border: #393836;
+        --color-text: #cdccca; --color-text-muted: #797876; --color-text-faint: #5a5957;
+        --color-text-inverse: #2b2a28; --color-primary: #4f98a3; --color-primary-hover: #227f8b;
+      }
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { -webkit-font-smoothing: antialiased; scroll-behavior: smooth; scroll-padding-top: var(--space-16); }
+    body { min-height: 100dvh; line-height: 1.6; font-family: var(--font-body); font-size: var(--text-base); color: var(--color-text); background-color: var(--color-bg); }
+    img, svg { display: block; max-width: 100%; }
+    button { cursor: pointer; background: none; border: none; font: inherit; color: inherit; }
+    h1, h2, h3, h4 { text-wrap: balance; line-height: 1.2; }
+    p, li { text-wrap: pretty; max-width: 72ch; }
+    a { color: var(--color-primary); }
+    :focus-visible { outline: 2px solid var(--color-primary); outline-offset: 3px; border-radius: var(--radius-sm); }
+    a, button { transition: color var(--transition-interactive), background var(--transition-interactive); }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border-width: 0; }
+    .nav {
+      position: sticky; top: 0; z-index: 100;
+      background: oklch(from var(--color-bg) l c h / 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--color-divider); padding: var(--space-4) 0;
+    }
+    .nav-inner { max-width: var(--content-default); margin-inline: auto; padding-inline: var(--space-6); display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { display: flex; align-items: center; gap: var(--space-2); text-decoration: none; color: var(--color-text); }
+    .nav-logo-text { font-family: var(--font-display); font-size: var(--text-lg); font-weight: 400; }
+    .nav-links { display: flex; gap: var(--space-6); align-items: center; }
+    .nav-links a { text-decoration: none; color: var(--color-text-muted); font-size: var(--text-sm); font-weight: 500; }
+    .nav-links a:hover { color: var(--color-text); }
+    .theme-toggle { padding: var(--space-2); border-radius: var(--radius-md); color: var(--color-text-muted); display: flex; align-items: center; }
+    .theme-toggle:hover { background: var(--color-surface-offset); color: var(--color-text); }
+    .page-header { max-width: var(--content-narrow); margin-inline: auto; padding: clamp(var(--space-12), 6vw, var(--space-20)) var(--space-6) var(--space-8); }
+    .page-header h1 { font-family: var(--font-display); font-size: var(--text-xl); font-weight: 400; margin-bottom: var(--space-3); }
+    .meta { font-size: var(--text-xs); color: var(--color-text-faint); }
+    .content { max-width: var(--content-narrow); margin-inline: auto; padding: 0 var(--space-6) clamp(var(--space-12), 6vw, var(--space-20)); }
+    .content h2 { font-family: var(--font-display); font-size: var(--text-lg); font-weight: 400; margin-top: var(--space-10); margin-bottom: var(--space-4); }
+    .content h3 { font-size: var(--text-base); font-weight: 700; margin-top: var(--space-6); margin-bottom: var(--space-2); }
+    .content p { margin-bottom: var(--space-4); color: var(--color-text-muted); }
+    .content ul, .content ol { margin-bottom: var(--space-4); padding-left: var(--space-6); color: var(--color-text-muted); }
+    .content li { margin-bottom: var(--space-2); }
+    .content strong { color: var(--color-text); font-weight: 700; }
+    .divider { height: 1px; background: var(--color-divider); margin: 0 var(--space-6); }
+    .footer { border-top: 1px solid var(--color-divider); padding: var(--space-8) var(--space-6); text-align: center; }
+    .footer-links { display: flex; gap: var(--space-6); justify-content: center; margin-bottom: var(--space-4); flex-wrap: wrap; }
+    .footer-links a { text-decoration: none; color: var(--color-text-muted); font-size: var(--text-sm); }
+    .footer-links a:hover { color: var(--color-primary); }
+    .footer p { font-size: var(--text-xs); color: var(--color-text-faint); }
+    @media (max-width: 600px) { .nav-links a { display: none; } }
+  </style>
+</head>
+<body>
+
+  <a href="#main" class="sr-only">Skip to content</a>
+
+  <nav class="nav" aria-label="Site navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="PowderPeak home">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+          <path d="M14 3L4 18h5v7h10v-7h5L14 3z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" fill="none"/>
+          <path d="M10 18l4-8 4 8" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round" fill="none" opacity="0.5"/>
+        </svg>
+        <span class="nav-logo-text">PowderPeak</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html#contact">Contact</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html" aria-current="page">Terms</a>
+        <button class="theme-toggle" data-theme-toggle aria-label="Switch to dark mode">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+    <div class="page-header">
+      <h1>Terms of Service</h1>
+      <p class="meta">Effective Date: May 5, 2026 &nbsp;&middot;&nbsp; Last Updated: May 5, 2026</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="content">
+      <p>These Terms of Service govern your use of the PowderPeak website and any stay at our vacation rental property located in the Northstar-at-Tahoe community in Truckee, California. By using our website or staying at our property, you agree to these terms.</p>
+
+      <h2>Property Information</h2>
+      <p>The permit number for this property is <strong>A-9826</strong>. Maximum occupancy is <strong>6</strong> persons. This property is governed by the Gold Bond HOA and the Northstar Property Owners Association (NPOA). All guests must comply with HOA and NPOA rules during their stay.</p>
+
+      <h2>SMS Messaging Terms</h2>
+      <h3>Opt-In</h3>
+      <p>By providing your mobile phone number during the booking process or through our website contact form and checking the consent box, you agree to receive text messages from PowderPeak. These messages are related to your reservation, check-in, stay support, and property notices.</p>
+
+      <h3>Message Types</h3>
+      <ul>
+        <li>Reservation confirmations and updates</li>
+        <li>Check-in instructions and door access codes</li>
+        <li>Property notices relevant to your stay</li>
+        <li>Guest support responses</li>
+      </ul>
+
+      <h3>Frequency &amp; Rates</h3>
+      <p>Message frequency varies based on your reservation. Message and data rates may apply depending on your mobile carrier plan.</p>
+
+      <h3>Opt-Out</h3>
+      <p>You may opt out at any time by replying <strong>STOP</strong> to any message. You will receive one confirmation message. After opting out, you will not receive further text messages from PowderPeak unless you opt in again.</p>
+
+      <h3>Help</h3>
+      <p>Reply <strong>HELP</strong> to any message for help, or contact us at (530) 580-4512 or powderpeaknorthstar@gmail.com.</p>
+
+      <h3>Third-Party Sharing</h3>
+      <p>Mobile information and opt-in data are not shared with third parties or affiliates for marketing or promotional purposes.</p>
+
+      <h2>Rental Terms</h2>
+      <h3>Check-In &amp; Check-Out</h3>
+      <p>Check-in time is 4:00 PM. Check-out time is 10:00 AM. Early check-in or late check-out must be arranged in advance and is subject to availability.</p>
+
+      <h3>Occupancy</h3>
+      <p>Maximum occupancy is 6 persons as permitted under Placer County STR Permit A-9826. Exceeding maximum occupancy is a violation of our permit and may result in immediate termination of your stay without refund.</p>
+
+      <h3>Quiet Hours</h3>
+      <p>Quiet hours are from 10:00 PM to 8:00 AM in accordance with Gold Bond HOA and NPOA community rules. Please be respectful of neighbors at all times.</p>
+
+      <h3>No Smoking</h3>
+      <p>Smoking is not permitted inside the unit or on any decks or balconies. This is a condition of our HOA and Placer County permit.</p>
+
+      <h3>Pets</h3>
+      <p>Pet policy is specified in your booking listing. Any unauthorized pets may result in additional fees.</p>
+
+      <h3>Damage</h3>
+      <p>Guests are responsible for any damage to the property beyond normal wear and tear. Damage charges may be applied to the payment method on file.</p>
+
+      <h3>HOA and NPOA Rules</h3>
+      <p>This property is subject to Gold Bond HOA CC&amp;Rs and Northstar Property Owners Association rules. Guests are expected to follow all community rules including parking, noise, and common area policies.</p>
+
+      <h2>Limitation of Liability</h2>
+      <p>PowderPeak is not liable for personal injury, loss of property, or damages resulting from your stay beyond what is required by applicable law. Use of the property and resort amenities is at your own risk.</p>
+
+      <h2>Changes to These Terms</h2>
+      <p>We may update these Terms of Service from time to time. The effective date at the top of this page will reflect the most recent update.</p>
+
+      <h2>Contact</h2>
+      <p>For questions, contact us at <strong>(530) 580-4512</strong> or <strong>powderpeaknorthstar@gmail.com</strong>.</p>
+      <ul>
+        <li>Text or call: <strong>(530) 580-4512</strong></li>
+        <li>Email: <strong>powderpeaknorthstar@gmail.com</strong></li>
+        <li>Property: PowderPeak, Northstar-at-Tahoe, Truckee, CA</li>
+      </ul>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+    <p>&copy; 2026 PowderPeak. Truckee, CA. All rights reserved.</p>
+  </footer>
+
+  <script>
+    (function(){const t=document.querySelector('[data-theme-toggle]'),r=document.documentElement;let d=matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';r.setAttribute('data-theme',d);t&&t.addEventListener('click',()=>{d=d==='dark'?'light':'dark';r.setAttribute('data-theme',d);t.setAttribute('aria-label','Switch to '+(d==='dark'?'light':'dark')+' mode');t.innerHTML=d==='dark'?'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>':'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';})})();
+  </script>
+</body>
+</html>
