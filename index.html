@@ -361,7 +361,7 @@
     <section class="hero">
       <span class="hero-eyebrow">Northstar&#8209;at&#8209;Tahoe &middot; Truckee, CA</span>
       <h1>PowderPeak at Northstar</h1>
-      <p class="hero-sub">A mountain condo in the Northstar-at-Tahoe community near Truckee. Contact us with questions about your booking, check-in, or stay — we&rsquo;re here to help.</p>
+      <p class="hero-sub">A mountain condo in the Northstar-at-Tahoe community near Truckee. Contact us with questions about your booking, check-in, or stay &mdash; we&rsquo;re here to help.</p>
     </section>
 
     <div class="divider"></div>
@@ -478,9 +478,9 @@
       });
     })();
 
-    // Contact form — points to Twilio Function (update FUNCTION_URL when deployed)
+    // Contact form — Twilio Function backend
     (function(){
-      const FUNCTION_URL = 'YOUR_TWILIO_FUNCTION_URL'; // replace with your Twilio Function URL
+      const FUNCTION_URL = 'https://powderpeakcontact-3297.twil.io/guest-inquiry';
       const form = document.getElementById('inquiry-form');
       const btn = document.getElementById('submit-btn');
       const errEl = document.getElementById('form-error');
@@ -492,13 +492,14 @@
 
         const consent = document.getElementById('inp-consent').checked;
         if (!consent) {
+          errEl.textContent = 'Please check the consent box before submitting.';
           errEl.style.display = 'block';
           document.getElementById('inp-consent').focus();
           return;
         }
 
         btn.disabled = true;
-        btn.textContent = 'Sending…';
+        btn.textContent = 'Sending\u2026';
 
         const payload = {
           name: document.getElementById('inp-name').value,
